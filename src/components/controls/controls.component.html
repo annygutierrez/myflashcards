@@ -1,0 +1,14 @@
+<div class="controls-container">
+    <div class="shuffle">
+      <p class="shuffle-text">Shuffle</p>
+    </div>
+    <div
+      *ngFor="let buttonItem of listOfButtons; let i = index"
+      (click)="handleButton(i)"
+      [style.backgroundColor]="buttonItem.active ? '#DDDDDD' : '#544F4F'"
+      class="button"
+    >
+    <img *ngIf="buttonItem.active" class="check" src="../../assets/check.png" />
+      <p [style.color]="buttonItem.active ? '#3E3C3C' : 'white'">{{buttonItem.label}}</p>
+    </div>
+</div>

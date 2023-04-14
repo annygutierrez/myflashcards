@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'myflashcards';
+  buttonAction = {};
+
+  handleSelection(event: any) {
+    this.buttonAction = event;
+  }
 }
