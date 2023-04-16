@@ -4,7 +4,7 @@
     </div>
   <div
     class="card"
-    [style.backgroundImage]="showImage ? 'url(' + deck[activeCard].image + ')' : ''"
+    [style.backgroundImage]="showImage && !turnAround ? 'url(' + deck[activeCard].image + ')' : ''"
     [style.backgroundColor]="turnAround ? '#636060' : showColor ? deck[activeCard].color : 'white'"
     (click)="handleTurnAround()"
   >
