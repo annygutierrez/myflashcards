@@ -1,8 +1,11 @@
 <div class="container">
   <div class="controls">
-    <app-controls (buttonSelected)=handleSelection($event)></app-controls>
+    <app-controls (shuffleDeck)=handleShuffle($event) (buttonSelected)=handleSelection($event)></app-controls>
   </div>
   <div class="game">
-    <app-card-game [controlsEvent]="buttonAction"></app-card-game>
+    <app-card-game
+      [controlsEvent]="buttonAction"
+      [shuffleEvent]="shuffleAction"
+    ></app-card-game>
   </div>
 </div>

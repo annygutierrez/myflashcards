@@ -8,8 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'myflashcards';
   buttonAction = {};
+  shuffleAction: number = 0;
 
   handleSelection(event: any) {
     this.buttonAction = event;
+  }
+
+  handleShuffle(event: any) {
+    this.shuffleAction = event;
   }
 }

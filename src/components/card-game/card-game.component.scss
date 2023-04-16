@@ -44,8 +44,24 @@
     color: white;
 }
 
+.strong {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+    width: 85%;
+    color: white;
+}
+
 .control {
     background-color: #585353;
+    width: 2.5em;
+    height: 10em;
+    margin: 0 1em;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.disabled-control {
+    background-color: #2E2E2E;
     width: 2.5em;
     height: 10em;
     margin: 0 1em;

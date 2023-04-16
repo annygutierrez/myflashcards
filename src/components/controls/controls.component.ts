@@ -7,6 +7,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class ControlsComponent {
     @Output() buttonSelected = new EventEmitter();
+    @Output() shuffleDeck = new EventEmitter();
   title = 'myflashcards';
   listOfButtons = [
       {
@@ -61,5 +62,9 @@ export class ControlsComponent {
         this.listOfButtons[index].active = !this.listOfButtons[index].active;
     }
     
+  }
+
+  shuffle() {
+     this.shuffleDeck.emit(Math.random());
   }
 }

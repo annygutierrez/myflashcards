@@ -1,5 +1,5 @@
 <div class="game-container">
-    <div *ngIf="activeCard" (click)="swapCard(-1)" class="control">
+    <div [ngClass]="activeCard ? 'control' : 'disabled-control'" (click)="swapCard(-1)">
 
     </div>
   <div
@@ -8,11 +8,12 @@
     [style.backgroundColor]="turnAround ? '#636060' : showColor ? deck[activeCard].color : 'white'"
     (click)="handleTurnAround()"
   >
-      <p *ngIf="!turnAround" class="word">{{ deck[activeCard][activeLanguage] }}</p>
+      <p *ngIf="!turnAround && !showImage" class="word">{{ deck[activeCard][activeLanguage] }}</p>
       <p *ngIf="!turnAround && showSentence" class="sentence">{{ deck[activeCard].sentence }}</p>
       <p *ngIf="turnAround" class="meaning">{{ activeLanguage === 'russian' ? deck[activeCard].english : deck[activeCard].russian }}</p>
+      <p *ngIf="turnAround" class="strong">{{ deck[activeCard].strong }}</p>
   </div>
-  <div *ngIf="activeCard < (deck.length - 1)" (click)="swapCard(1)" class="control">
+  <div [ngClass]="activeCard < (deck.length - 1) ? 'control' : 'disabled-control'" (click)="swapCard(1)">
 
   </div>
 </div>
