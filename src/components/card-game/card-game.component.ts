@@ -155,6 +155,15 @@ export class CardGameComponent {
         sentence: "Я искал свой телефон везде, но не мог найти его нигде.",
         image: "https://images.theconversation.com/files/515234/original/file-20230314-3089-pgw6hr.jpg?ixlib=rb-1.1.0&rect=77%2C0%2C8404%2C4199&q=45&auto=format&w=1356&h=668&fit=crop",
         color: "#e54e5a"
+    },
+    {
+        russian: "Ошибка",
+        strong: 3,
+        spanish: "Error",
+        english: "Mistake",
+        sentence: "Я совершил ошибку в своих расчетах.",
+        image: "https://blog.vverh.digital/wp-content/uploads/2020/06/oblojka-404.png",
+        color: "#00edf6"
     }
   ];
   activeCard = 0;
